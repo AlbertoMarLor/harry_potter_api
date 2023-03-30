@@ -1,9 +1,21 @@
 const router = require('express').Router();
 
+const { getAll } = require('../../models/movies.model');
 
-router.get('/', (req, res) => {
 
-    res.send('GET MOVIES');
+router.get('/', async (req, res) => {
+
+    try {
+        const [movies] = await getAll();
+
+        res.json(movies);
+    } catch (error) {
+        res.json({ fatal: error.message })
+    }
+
+
+
+
 });
 
 

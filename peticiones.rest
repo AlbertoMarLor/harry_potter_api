@@ -14,7 +14,7 @@ GET {{host}}{{urlMovies}}
 GET {{host}}{{urlMovies}}/1
 ###
 
-POST {{host}}{{urlMovies}}/new
+POST {{host}}{{urlMovies}}/newMovie
 Content-Type: application/json
 
 {

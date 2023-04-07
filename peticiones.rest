@@ -2,6 +2,8 @@
 @urlMovies = /api/movies
 @urlCharacters = /api/characters
 
+@urlUsers = /api/users
+
 
 
 
@@ -66,3 +68,34 @@ Content-Type: application/json
 DELETE {{host}}{{urlCharacters}}/10
 
 ###
+
+
+
+#######Usuarios
+
+
+
+###
+POST {{host}}{{urlUsers}}/register
+Content-Type: application/json
+
+{
+"username": "admin6",
+"email": "admin6@gmail.com",
+"password": "admin",
+"role": "admin"
+
+}
+
+###
+
+POST {{host}}{{urlUsers}}/login
+Content-Type: application/json
+
+{
+
+"email": "admin@gmail.com",
+"password": "admin"
+
+
+}

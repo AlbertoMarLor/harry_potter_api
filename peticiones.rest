@@ -10,6 +10,7 @@
 
 ####### Movies
 GET {{host}}{{urlMovies}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE1NzY5MzEsImlhdCI6MTY4MTE0NDkzMX0.YfqoeHdl2JfPQh4ueRMyZCs5v5YD-iVc5Kx99sIuFd4
 
 ###
 
@@ -36,10 +37,12 @@ DELETE {{host}}{{urlMovies}}/10
 #######Characters
 
 GET {{host}}{{urlCharacters}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE1NzY5MzEsImlhdCI6MTY4MTE0NDkzMX0.YfqoeHdl2JfPQh4ueRMyZCs5v5YD-iVc5Kx99sIuFd4
 
 ###
 
 GET {{host}}{{urlCharacters}}/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE1NzY5MzEsImlhdCI6MTY4MTE0NDkzMX0.YfqoeHdl2JfPQh4ueRMyZCs5v5YD-iVc5Kx99sIuFd4
 
 ###
 PUT {{host}}{{urlCharacters}}/6

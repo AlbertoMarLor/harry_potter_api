@@ -1,11 +1,13 @@
 const router = require('express').Router();
 
+const { checkToken } = require('../../helpers/middlewares');
 const { getAll, deleteById, getById } = require('../../models/movies.model');
 const { create } = require('../../models/movies.model');
 
 
 
-router.get('/', async (req, res) => {
+
+router.get('/', checkToken, async (req, res) => {
 
     try {
         const [movies] = await getAll();
@@ -14,8 +16,6 @@ router.get('/', async (req, res) => {
     } catch (error) {
         res.json({ fatal: error.message })
     }
-
-
 
 
 });
@@ -74,3 +74,4 @@ router.delete('/:movieId', async (req, res) => {
 
 
 module.exports = router;
+

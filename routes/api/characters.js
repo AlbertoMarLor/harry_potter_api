@@ -1,9 +1,10 @@
 const router = require('express').Router();
 
+const { checkToken } = require('../../helpers/middlewares');
 const { getAll, updateById, getById, create, deleteById } = require('../../models/characters.model');
 
 
-router.get('/', async (req, res) => {
+router.get('/', checkToken, async (req, res) => {
 
     try {
         const [movies] = await getAll();

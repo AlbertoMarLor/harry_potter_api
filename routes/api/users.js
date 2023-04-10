@@ -4,14 +4,6 @@ const { create, getById, getByEmail } = require('../../models/users.model');
 const { createToken } = require('../../helpers/utils');
 
 
-
-
-
-
-
-
-
-
 router.post('/register', async (req, res) => {
 
     req.body.password = bcrypt.hashSync(req.body.password, 8);
